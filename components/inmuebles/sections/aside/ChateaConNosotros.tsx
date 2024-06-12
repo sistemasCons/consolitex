@@ -73,7 +73,7 @@ export const ChateaConNosotros: FC<Props> = ({ userLogged, data }) => {
 const styles = {
   mainContainer: {
     width: "100%",
-    minHeight: 400,
+    minHeight: 250,
     backgroundColor: "rgba(255,255,255,1)",
     borderRadius: 5,
     display: "flex",

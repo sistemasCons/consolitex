@@ -152,6 +152,7 @@ export const InmuebleList: FC<Props> = ({ inmuebles }) => {
               alignItems: "center",
               justifyContent: "center",
               margin: "auto",
+              marginBottom: 5,
               flexFlow: "column wrap",
             }}
           >
