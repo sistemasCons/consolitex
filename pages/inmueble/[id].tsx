@@ -113,15 +113,22 @@ const InmueblePage: NextPage<Props> = ({
         container
         display="flex"
         flexDirection="column"
-        alignItems="center"
+        alignItems="stretch"
         justifyContent="space-evenly"
-        wrap="nowrap"
         columnSpacing={{ xs: 0, md: 1 }}
         rowSpacing={1}
         sx={{ width: "100%", p: { xs: 0, md: 1 } }}
       >
         {/* Seccion de Informacion del inmueble */}
-        <Grid item xs={12} sm={12} md={0} display="flex" gap={1}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={0}
+          display={{ xs: "row", md: "flex" }}
+          wrap="wrap"
+          gap={1}
+        >
           {userRef.id !== 0 && (
             <RecomendadoPor data={data} userData={userRef} />
           )}
@@ -149,6 +156,9 @@ const InmueblePage: NextPage<Props> = ({
           <Suspense fallback="Cargando caracteristicas...">
             <Caracteristicas caracteristicas={caracteristicas} />
           </Suspense>
+          <Suspense fallback="Cargando zonas comunes...">
+            <ZonasComunes zonasComunes={zonas_comunes} />
+          </Suspense>
         </Grid>
       </Grid>
 
@@ -164,15 +174,6 @@ const InmueblePage: NextPage<Props> = ({
         sx={{ width: "100%", p: { xs: 0, md: 1 } }}
       >
         <Grid item xs={12} sm={12} md={8}>
-          <Suspense fallback="Cargando zonas comunes...">
-            <ZonasComunes zonasComunes={zonas_comunes} />
-          </Suspense>
-          <Box sx={{ width: "100%", borderRadius: 5, overflow: "hidden" }}>
-            <CustomImage
-              src={"/banner4.webp"}
-              alt="Banner de publicidad - Consolitex"
-            />
-          </Box>
           <Box
             sx={{
               width: "100%",
@@ -186,11 +187,18 @@ const InmueblePage: NextPage<Props> = ({
             </Suspense>
           </Box>
 
+          <Box sx={{ width: "100%", borderRadius: 5, overflow: "hidden" }}>
+            <CustomImage
+              src={"/banner4.webp"}
+              alt="Banner de publicidad - Consolitex"
+            />
+          </Box>
+          {/* 
           <Grid item xs={12} sm={12} md={12}>
             <Suspense fallback="Cargando...">
               <EnviarMensaje data={data} />
             </Suspense>
-          </Grid>
+          </Grid> */}
         </Grid>
 
         <Grid item xs={12} md={4}>
@@ -209,11 +217,11 @@ const InmueblePage: NextPage<Props> = ({
                 </Suspense>
               </Grid>
             )}
-            <Grid item xs={12} md={12}>
+            {/* <Grid item xs={12} md={12}>
               <Suspense fallback="Cargando...">
                 <Recomendados related={related} />
               </Suspense>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
       </Grid>
