@@ -138,7 +138,11 @@ export const MenuBusquedaPc: FC = () => {
         >
           Encuentra tu inmueble
         </Typography>
-        <IconButton color="info" onClick={openInfo}>
+        <IconButton
+          color="info"
+          onClick={openInfo}
+          sx={{ textShadow: "0 0 20px rgba(0,0,0,0.9)" }}
+        >
           <InfoIcon />
         </IconButton>
       </Box>
@@ -303,9 +307,9 @@ const styles = {
     },
     alignItems: "center",
     justifyContent: "center",
-    background: "rgba( 255,255,255, 0.2 )",
+    background: "rgba( 255,255,255, 0.1 )",
     boxShadow: "0 8px 32px 0 rgba( 100, 100, 100, 0.4 )",
-    backdropFilter: "blur(6px)",
+    backdropFilter: "blur(3px)",
     flexDirection: "column",
   },
   contenedorBotonera: {
@@ -324,7 +328,7 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     overflowX: "scroll",
-    background: "rgba(255,255,255,0.8)",
+    background: "rgba(255,255,255,0.9)",
     borderRadius: "1.3em 1.3em 0 0",
     pt: 1,
     pb: 1,
@@ -396,7 +400,7 @@ const styles = {
       fontFamily: "Hind",
       padding: 2,
       color: "black",
-      background: "rgba(255,255,255,0.8)",
+      background: "rgba(255,255,255,0.9)",
       borderRadius: "0 0 0 1.5em",
     },
   },
