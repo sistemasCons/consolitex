@@ -115,12 +115,17 @@ export const Header: React.FC<Props> = ({ url_inmueble, data, imagenes }) => {
           overflow: "hidden",
           transform: "translateX(-50%) translateY(-50%) scale(1)",
           p: 2,
-          zIndex: 91,
-          background: "rgba(0,0,0,0.5)",
+          zIndex: 201,
+          // background: "rgba(0,0,0,0.5)",
         }}
       >
         <Button
-          sx={{ textTransform: "none", p: 1.8, color: "#FFF" }}
+          sx={{
+            textTransform: "none",
+            p: 1.8,
+            color: "#FFF",
+            padding: 100,
+          }}
           color="primary"
           onClick={handleOpen}
         >
