@@ -28,6 +28,10 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../context/authcontext";
 import { VerticalAlignBottom } from "@mui/icons-material";
 
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
 interface Props {
   inmueble: Inmueble;
 }
@@ -334,7 +338,7 @@ export const InmuebleCard: FC<Props> = ({ inmueble }) => {
             <Box sx={styles.actionsContainer}>
               <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Box sx={{ display: "flex", flexWrap: "nowrap" }}>
-                  {favorite ? (
+                  {/* {favorite ? (
                     <IconButton
                       disabled={isLoading}
                       sx={{ mr: 2 }}
@@ -375,7 +379,7 @@ export const InmuebleCard: FC<Props> = ({ inmueble }) => {
                   )}
                   <IconButton sx={{ mr: 2 }}>
                     <ShareRoundedIcon />
-                  </IconButton>
+                  </IconButton> */}
                   <Button
                     size="small"
                     color="primary"
